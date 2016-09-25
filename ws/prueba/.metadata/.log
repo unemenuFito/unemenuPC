@@ -1,0 +1,150 @@
+!SESSION 2016-09-25 18:54:55.780 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/fito/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Users/fito/git/ws/prueba -product org.eclipse.epp.package.jee.product -keyring /Users/fito/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-09-25 18:55:03.025
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 2 2016-09-25 18:55:11.383
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.common.jdt.debug.ui, page: org.jboss.tools.common.jdt.debug.ui.preferences.RemoteDebugPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-09-25 18:55:11.389
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.runtime.ui, page: org.jboss.tools.runtime.preferences.RuntimePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2016-09-25 18:55:11.390
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.usage, page: org.jboss.tools.usage.analytics.preferences.UsageAnalyticsPreferencePage)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-09-25 18:55:16.193
+!MESSAGE Exception caught during execution of command '[git, config, --system, --edit]' in '/usr/bin', return code '128', error message 'fatal: Could not switch to '/Library/Developer/CommandLineTools/usr/etc/': No such file or directory
+'
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-25 18:57:51.450
+!MESSAGE Committing failed
+!STACK 1
+org.eclipse.team.core.TeamException: An internal error occurred
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:249)
+	at org.eclipse.egit.core.op.CommitOperation.access$5(CommitOperation.java:237)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:198)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:208)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:111)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.api.errors.WrongRepositoryStateException: Amending is not possible on initial commit.
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:212)
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:247)
+	... 6 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2016-09-25 18:57:51.452
+!MESSAGE An internal error occurred
+!STACK 0
+org.eclipse.jgit.api.errors.WrongRepositoryStateException: Amending is not possible on initial commit.
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:212)
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:247)
+	at org.eclipse.egit.core.op.CommitOperation.access$5(CommitOperation.java:237)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:198)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:208)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:111)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-09-25 19:01:49.015
+!MESSAGE An exception occurred during push on URI ssh://git@github.com/unemenuFito/unemenuPC.git: ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:172)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:77)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:48)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:160)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:137)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:322)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:167)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:161)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:117)
+	... 10 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-25 19:01:49.038
+!MESSAGE Can't connect to any repository: ssh://git@github.com/unemenuFito/unemenuPC.git (ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail)
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-25 19:02:22.774
+!MESSAGE Transport Error: Cannot get remote repository refs.
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:221)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:159)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:100)
+	at org.eclipse.egit.ui.internal.components.RefSpecPage$3.run(RefSpecPage.java:254)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://git@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:160)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:137)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init>(TransportGitSsh.java:264)
+	at org.eclipse.jgit.transport.TransportGitSsh.openFetch(TransportGitSsh.java:162)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:198)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:117)
+	... 8 more
+
+!ENTRY org.eclipse.egit.core 4 0 2016-09-25 19:03:09.562
+!MESSAGE An exception occurred during push on URI ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git: ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:172)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:77)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:48)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:160)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:137)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:322)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:167)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:161)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:117)
+	... 10 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-25 19:03:09.570
+!MESSAGE Can't connect to any repository: ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git (ssh://unemenuFito@github.com/unemenuFito/unemenuPC.git: Auth fail)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-09-25 19:05:56.744
+!MESSAGE An exception occurred during push on URI git@github.com:unemenuFito/unemenuPC.git: git@github.com:unemenuFito/unemenuPC.git: Auth fail
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:172)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:77)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:48)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:unemenuFito/unemenuPC.git: Auth fail
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:160)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:137)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:322)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:167)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:161)
+	... 4 more
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:512)
+	at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession(JschConfigSessionFactory.java:117)
+	... 10 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-25 19:05:56.777
+!MESSAGE Can't connect to any repository: git@github.com:unemenuFito/unemenuPC.git (git@github.com:unemenuFito/unemenuPC.git: Auth fail)
